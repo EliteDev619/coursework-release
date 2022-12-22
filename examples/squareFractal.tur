@@ -1,0 +1,32 @@
+def drawFractal(length: Int, depth: Int): Unit {
+    if (depth == 0) {
+        ()
+    } else {
+        changeColor(red);
+        forward(length);
+        right(90);
+        drawFractal(length / 3, depth - 1);
+        changeColor(black);
+        forward(length);
+        right(90);
+        drawFractal(length / 3, depth - 1);
+        changeColor(blue);
+        forward(length);
+        right(90);
+        drawFractal(length / 3, depth - 1);
+        changeColor(black);
+        forward(length);
+        right(90);
+        drawFractal((length / 3), (depth - 1))
+    }
+}
+
+// Navigate to the bottom left
+penUp();
+left(90);
+forward(200);
+left(90);
+forward(200);
+right(180);
+penDown();
+drawFractal(300, 5)

@@ -1,0 +1,19 @@
+def drawSquare(width: Int): Unit {
+    changeColor(red);
+    forward(width);
+    right(90);
+    changeColor(green);
+    forward(width);
+    right(90);
+    changeColor(blue);
+    forward(width);
+    right(90);
+    changeColor(yellow);
+    forward(width);
+    right(90)
+}
+
+drawSquare(200);
+drawSquare(100);
+drawSquare(50);
+drawSquare(25)

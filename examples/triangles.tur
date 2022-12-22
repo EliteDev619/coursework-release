@@ -1,0 +1,21 @@
+def drawTriangle(length: Int): Unit {
+  forward(length);
+  right(120);
+  forward(length);
+  right(120);
+  forward(length);
+  right(120)
+}
+
+def drawTriangles(length: Int, number: Int): Unit {
+    if (number <= 0) {
+        ()
+    } else {
+      let angle = 360 / number in
+      drawTriangle(length);
+      right(angle);
+      drawTriangles(length, number - 1)
+    }
+}
+
+drawTriangles(120, 120)

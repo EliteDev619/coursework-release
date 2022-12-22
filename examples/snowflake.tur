@@ -1,0 +1,25 @@
+def snowflakeSide(length: Int, depth: Int): Unit {
+  if (depth == 0) {
+    forward(length)
+  } else {
+    snowflakeSide((length / 3), (depth - 1));
+    left(60);
+    snowflakeSide((length / 3), (depth - 1));
+    right(120);
+    snowflakeSide((length / 3), (depth - 1));
+    left(60);
+    snowflakeSide((length / 3), (depth - 1))
+  }
+}
+
+
+def snowflake(length: Int, depth: Int): Unit {
+  snowflakeSide(length, depth);
+  right(120);
+  snowflakeSide(length, depth);
+  right(120);
+  snowflakeSide(length, depth);
+  right(120)
+}
+
+snowflake(200, 3)

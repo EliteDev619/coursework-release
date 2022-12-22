@@ -1,0 +1,68 @@
+name:                coursework
+version:             0.1.0.0
+github:              "githubuser/coursework"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2022 Author name here"
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+- turtle.png
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/coursework#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- gloss >= 1.13.2.1
+- gloss-juicy >= 0.2.3
+- gloss-export >= 0.1.0.4
+- parsec >= 3.1.14.0
+- mtl >= 2.2.0
+- transformers >= 0.5
+- optparse-applicative >= 0.16.1.0
+- svg-builder >= 0.1.1
+- text == 1.2.5.0
+
+ghc-options:
+- -W
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  coursework-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - coursework
+
+tests:
+  coursework-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - coursework

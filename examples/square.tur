@@ -1,0 +1,12 @@
+changeColor(red);
+forward(120);
+right(90);
+changeColor(green);
+forward(120);
+right(90);
+changeColor(blue);
+forward(120);
+right(90);
+changeColor(yellow);
+forward(120);
+right(90)
